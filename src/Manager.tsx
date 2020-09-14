@@ -35,12 +35,12 @@ export const Manager = React.forwardRef((_, ref): any => {
     }),
   );
 
-  return portals.map(({ key, children }, index: number) => (
+  return portals.map(({ key, children, style }, index: number) => (
     <View
       key={`react-native-portalize-${key}-${index}`}
       collapsable={false}
       pointerEvents="box-none"
-      style={StyleSheet.absoluteFill}
+      style={[StyleSheet.absoluteFill, style]}
     >
       {children}
     </View>
